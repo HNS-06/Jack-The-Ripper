@@ -23,7 +23,7 @@ class StoredResult:
 
 class ResultStore:
     def __init__(self, store_dir: Optional[str] = None):
-        self.store_dir = Path(store_dir) if store_dir else Path.home() / ".john" / "results"
+        self.store_dir = Path(store_dir) if store_dir else Path.home() / ".jack" / "results"
         self.store_dir.mkdir(parents=True, exist_ok=True)
 
     def save(self, session_id: str, results: List[dict]):

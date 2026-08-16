@@ -1,9 +1,9 @@
 """Unit tests for hash detection and registry."""
 
 import pytest
-from john.hashes.detector import HashDetector
-from john.hashes.registry import HashFormatRegistry
-from john.hashes.rainbow import RainbowTableDetector
+from jack.hashes.detector import HashDetector
+from jack.hashes.registry import HashFormatRegistry
+from jack.hashes.rainbow import RainbowTableDetector
 
 
 def test_hash_detector_md5():

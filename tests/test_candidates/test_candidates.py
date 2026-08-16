@@ -1,7 +1,7 @@
 """Unit tests for candidate generators."""
 
 import pytest
-from john.candidates.charset import CharsetGenerator
+from jack.candidates.charset import CharsetGenerator
 
 
 def test_charset_generator_digits():

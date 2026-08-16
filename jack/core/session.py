@@ -43,7 +43,7 @@ class SessionManager:
         if session_dir:
             self.session_dir = Path(session_dir)
         else:
-            self.session_dir = Path.home() / ".john" / "sessions"
+            self.session_dir = Path.home() / ".jack" / "sessions"
         self.session_dir.mkdir(parents=True, exist_ok=True)
         self._current: Optional[SessionData] = None
     

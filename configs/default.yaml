@@ -1,4 +1,4 @@
-# John the Ripper - Default Configuration
+# Jack the Ripper - Default Configuration
 
 engine:
   workers: auto
@@ -8,11 +8,11 @@ engine:
 session:
   autosave: true
   interval: 30
-  directory: ~/.john/sessions
+  directory: ~/.jack/sessions
 
 report:
   format: json
-  directory: ~/.john/reports
+  directory: ~/.jack/reports
 
 attack:
   default_mode: dictionary
@@ -25,7 +25,7 @@ hash_detection:
 
 logging:
   level: info
-  file: ~/.john/logs/john.log
+  file: ~/.jack/logs/jack.log
   max_size: 10MB
   backup_count: 5
 

@@ -3,14 +3,14 @@ requires = ["setuptools>=68.0", "wheel"]
 build-backend = "setuptools.backends._legacy:_Backend"
 
 [project]
-name = "john-the-ripper"
+name = "jack-the-ripper"
 version = "2.0.0"
 description = "Advanced Offline Password Audit Framework"
 readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.11"
 authors = [
-    {name = "John the Ripper Team"}
+    {name = "Jack the Ripper Team"}
 ]
 keywords = ["password", "audit", "security", "hash", "cracking"]
 classifiers = [
@@ -38,10 +38,11 @@ dev = [
 ]
 
 [project.scripts]
-john = "john.cli.main:app"
+jack = "jack.cli.main:app"
+john = "jack.cli.main:app"
 
 [tool.setuptools.packages.find]
-include = ["john*"]
+include = ["jack*"]
 
 [tool.ruff]
 line-length = 100

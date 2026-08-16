@@ -1,10 +1,10 @@
 """Unit tests for attacks module."""
 
 import pytest
-from john.attacks.base import AttackConfig
-from john.attacks.incremental import IncrementalAttack
-from john.attacks.ratelimit import RateLimiter
-from john.attacks.ruleparser import RuleFileParser
+from jack.attacks.base import AttackConfig
+from jack.attacks.incremental import IncrementalAttack
+from jack.attacks.ratelimit import RateLimiter
+from jack.attacks.ruleparser import RuleFileParser
 
 
 def test_incremental_attack_generator():

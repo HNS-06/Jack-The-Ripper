@@ -1,9 +1,9 @@
 """Unit tests for audit engine."""
 
 import pytest
-from john.core.engine import AuditEngine
-from john.reporting.scoring import PasswordScorer
-from john.reporting.analyzer import PatternAnalyzer
+from jack.core.engine import AuditEngine
+from jack.reporting.scoring import PasswordScorer
+from jack.reporting.analyzer import PatternAnalyzer
 
 
 def test_audit_engine_list_attacks():

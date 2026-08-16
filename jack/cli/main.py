@@ -38,8 +38,8 @@ from ..hashes.detector import HashDetector
 
 
 app = Typer(
-    name="john",
-    help="John the Ripper - Advanced Offline Password Audit Framework",
+    name="jack",
+    help="Jack the Ripper - Advanced Offline Password Audit Framework",
     no_args_is_help=True,
     add_completion=False,
 )
@@ -47,12 +47,12 @@ app = Typer(
 console = Console() if HAS_RICH else None
 
 BANNER = r"""
-     ██╗ ██████╗ ██╗  ██╗███╗   ██╗
-     ██║██╔═══██╗██║  ██║████╗  ██║
-     ██║██║   ██║███████║██╔██╗ ██║
-██   ██║██║   ██║██╔══██║██║╚██╗██║
-╚█████╔╝╚██████╔╝██║  ██║██║ ╚████║
- ╚════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝
+   ██████╗ █████╗  ██████╗██╗  ██╗
+   ██╔════╝██╔══██╗██╔════╝██║ ██╔╝
+   ██║     ███████║██║     █████═╝ 
+   ██║     ██╔══██║██║     ██╔═██╗ 
+   ╚██████╗██║  ██║╚██████╗██║  ██╗
+    ╚═════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
 
       T H E   R I P P E R
       Offline Password Audit Framework
@@ -70,7 +70,7 @@ AUTH_WARNING = """
 
 def version_callback(value: bool):
     if value:
-        print("John the Ripper v2.0.0")
+        print("Jack the Ripper v2.0.0")
         raise typer.Exit()
 
 
@@ -81,7 +81,7 @@ def main(
         is_eager=True, help="Show version and exit"
     ),
 ):
-    """John the Ripper - Advanced Offline Password Audit Framework"""
+    """Jack the Ripper - Advanced Offline Password Audit Framework"""
     pass
 
 
@@ -99,7 +99,7 @@ def identify(
 
     engine = AuditEngine()
     if console:
-        console.print(Panel(f"[bold]Hash Identification[/bold]\nFile: {hash_file}", title="JOHN"))
+        console.print(Panel(f"[bold]Hash Identification[/bold]\nFile: {hash_file}", title="JACK"))
         result = engine.detect(hash_file)
         table = Table(title="Detection Results")
         table.add_column("Format", style="cyan")
@@ -171,13 +171,13 @@ def audit(
     session = session_mgr.create(config={"hash_file": hash_file, "mode": mode, "wordlist": wordlist, "mask": mask})
 
     if console:
-        console.print(Panel(f"[bold]Password Audit[/bold]\nTarget: {hash_file}\nMode: {mode}", title="JOHN"))
+        console.print(Panel(f"[bold]Password Audit[/bold]\nTarget: {hash_file}\nMode: {mode}", title="JACK"))
 
     def signal_handler(sig, frame):
         print("\n\nInterrupted! Saving session...")
         session_mgr.pause(session)
         print(f"Session saved: {session.session_id}")
-        print(f"Resume with: john session-resume {session.session_id}")
+        print(f"Resume with: jack session-resume {session.session_id}")
         raise typer.Exit(0)
 
     signal.signal(signal.SIGINT, signal_handler)
@@ -621,7 +621,7 @@ def multitarget(
 def doctor():
     """Diagnose installation and environment."""
     print(BANNER)
-    print("\nJOHN SYSTEM DIAGNOSTICS")
+    print("\nJACK SYSTEM DIAGNOSTICS")
     print("=" * 50)
 
     checks = []
@@ -645,7 +645,7 @@ def doctor():
     except Exception:
         checks.append(("Hash library", False, "error"))
 
-    session_dir = Path.home() / ".john" / "sessions"
+    session_dir = Path.home() / ".jack" / "sessions"
     checks.append(("Session storage", True, str(session_dir)))
 
     # SIMD detection
@@ -678,7 +678,7 @@ def doctor():
 @app.command()
 def config_show():
     """Show current configuration."""
-    config_dir = Path.home() / ".john"
+    config_dir = Path.home() / ".jack"
     print(f"Config directory: {config_dir}")
     config_file = config_dir / "config.toml"
     if config_file.exists():

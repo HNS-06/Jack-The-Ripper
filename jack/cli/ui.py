@@ -39,7 +39,7 @@ class AuditDashboard:
     def render_header(self, target: str, mode: str, fmt: str) -> Panel:
         """Render header panel."""
         return Panel(
-            f"[bold]JOHN THE RIPPER[/bold]\n"
+            f"[bold]JACK THE RIPPER[/bold]\n"
             f"Target: {target}  |  Format: {fmt}  |  Mode: {mode}",
             title="Audit Dashboard",
             border_style="blue",
@@ -82,14 +82,14 @@ class AuditDashboard:
 
 
 def print_banner():
-    """Print the John the Ripper banner."""
+    """Print the Jack the Ripper banner."""
     banner = r"""
-     ██╗ ██████╗ ██╗  ██╗███╗   ██╗
-     ██║██╔═══██╗██║  ██║████╗  ██║
-     ██║██║   ██║███████║██╔██╗ ██║
-██   ██║██║   ██║██╔══██║██║╚██╗██║
-╚█████╔╝╚██████╔╝██║  ██║██║ ╚████║
- ╚════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝
+   ██████╗ █████╗  ██████╗██╗  ██╗
+   ██╔════╝██╔══██╗██╔════╝██║ ██╔╝
+   ██║     ███████║██║     █████═╝ 
+   ██║     ██╔══██║██║     ██╔═██╗ 
+   ╚██████╗██║  ██║╚██████╗██║  ██╗
+    ╚═════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═══╝
 
       T H E   R I P P E R
       Offline Password Audit Framework

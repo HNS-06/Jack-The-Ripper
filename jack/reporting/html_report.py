@@ -8,7 +8,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>John the Ripper - Audit Report</title>
+<title>Jack the Ripper - Audit Report</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Courier New',monospace;background:#0a0a0a;color:#00ff41;padding:20px}
@@ -33,7 +33,7 @@ td{color:#00cc33}
 <body>
 <div class="container">
 <div class="banner">
-<h1>JOHN THE RIPPER</h1>
+<h1>JACK THE RIPPER</h1>
 <p>Offline Password Audit Report</p>
 <p>Generated: %s</p>
 </div>
@@ -60,7 +60,7 @@ AUTHORIZED AUDIT ONLY - This report contains sensitive security data.
 <h2>MATCHES</h2>
 %s
 </div>
-<div class="footer">John the Ripper v2.0.0</div>
+<div class="footer">Jack the Ripper v2.0.0</div>
 </div>
 </body>
 </html>"""

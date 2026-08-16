@@ -57,7 +57,7 @@ class PipedInput:
         import tempfile
         
         if output_path is None:
-            fd, output_path = tempfile.mkstemp(suffix='.txt', prefix='john_pipe_')
+            fd, output_path = tempfile.mkstemp(suffix='.txt', prefix='jack_pipe_')
             import os
             os.close(fd)
         
@@ -68,7 +68,7 @@ class PipedInput:
         return output_path
     
     def pipe_hashcat_output(self, hashcat_cmd: str) -> Iterator[str]:
-        """Parse output from hashcat or similar tools piped to john."""
+        """Parse output from hashcat or similar tools piped to jack."""
         import subprocess
         import shlex
         

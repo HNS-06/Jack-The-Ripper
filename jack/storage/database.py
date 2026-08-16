@@ -13,7 +13,7 @@ class Database:
         if db_path:
             self.db_path = Path(db_path)
         else:
-            self.db_path = Path.home() / ".john" / "john.db"
+            self.db_path = Path.home() / ".jack" / "jack.db"
         self.db_path.parent.mkdir(parents=True, exist_ok=True)
         self._init_db()
 

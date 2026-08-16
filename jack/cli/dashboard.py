@@ -85,7 +85,7 @@ if HAS_RICH:
             
             # Header
             header = Panel(
-                Text("JOHN THE RIPPER  |  Offline Password Audit Framework  |  v2.0.0",
+                Text("JACK THE RIPPER  |  Offline Password Audit Framework  |  v2.0.0",
                      justify="center", style="bold blue"),
                 box=box.DOUBLE,
             )

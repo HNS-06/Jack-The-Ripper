@@ -206,7 +206,7 @@ class AuditEngine:
 
         words = list(piped.read_hashes(config.pipe_source))
         if words:
-            fd, tmp = tempfile.mkstemp(suffix='.txt', prefix='john_pipe_')
+            fd, tmp = tempfile.mkstemp(suffix='.txt', prefix='jack_pipe_')
             os.close(fd)
             with open(tmp, 'w', encoding='utf-8') as f:
                 for w in words:

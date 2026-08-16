@@ -10,7 +10,7 @@ HTML_PDF_TEMPLATE = """<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>John the Ripper - Audit Report</title>
+<title>Jack the Ripper - Audit Report</title>
 <style>
 @page { size: A4; margin: 2cm; }
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -41,7 +41,7 @@ td { font-size: 13px; }
 </head>
 <body>
 <div class="header">
-<h1>JOHN THE RIPPER</h1>
+<h1>JACK THE RIPPER</h1>
 <p>Password Audit Report</p>
 <p>Generated: %s</p>
 </div>
@@ -73,7 +73,7 @@ CONFIDENTIAL - This report contains sensitive security data. Handle according to
 %s
 </div>
 <div class="footer">
-John the Ripper v2.0.0 - Offline Password Audit Framework<br>
+Jack the Ripper v2.0.0 - Offline Password Audit Framework<br>
 This report was auto-generated and should be reviewed by qualified personnel.
 </div>
 </body>

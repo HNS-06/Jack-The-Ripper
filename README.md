@@ -1,4 +1,4 @@
-# Jack The Ripper (John The Ripper v2.0) ⚡
+# Jack The Ripper ⚡
 
 > **Advanced Offline Password Security Audit & Hash Analysis Framework**
 
@@ -8,7 +8,7 @@
 [![Security Audit](https://img.shields.io/badge/security-audit--ready-red.svg)]()
 [![Code Style: Ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg)](https://github.com/astral-sh/ruff)
 
-**Jack The Ripper** (also known as *John the Ripper Python Edition*) is a high-performance, modular, offline password security audit framework built natively in Python 3.11+. Engineered for cybersecurity researchers, penetration testers, and security auditors, it provides multi-threaded attack engines, hardware acceleration detection, memory-mapped large wordlist streaming, intelligent pattern analysis, live terminal dashboards, and comprehensive enterprise PDF reporting.
+**Jack The Ripper** is a high-performance, modular, offline password security audit framework built natively in Python 3.11+. Engineered for cybersecurity researchers, penetration testers, and security auditors, it provides multi-threaded attack engines, hardware acceleration detection, memory-mapped large wordlist streaming, intelligent pattern analysis, live terminal dashboards, and comprehensive enterprise PDF reporting.
 
 ---
 
@@ -53,7 +53,7 @@ Jack-The-Ripper/
 ├── configs/               # System & attack configuration files
 ├── docs/                  # Architectural documentation & guides
 ├── examples/              # Sample targets, custom rules, & wordlists
-├── john/                  # Core Python Package
+├── jack/                  # Core Python Package
 │   ├── attacks/           # Attack implementations & rule engines
 │   │   ├── base.py        # Base attack contract
 │   │   ├── dictionary.py  # Dictionary attack engine
@@ -111,68 +111,68 @@ pip install -e ".[dev]"
 
 ## 🛠️ CLI Quick Start & Usage
 
-Once installed, the CLI tool `john` is available directly in your terminal:
+Once installed, the CLI tool `jack` is available directly in your terminal:
 
 ```bash
-john --help
+jack --help
 ```
 
 ### 1. Hash Format Identification
 Auto-detect algorithm type, confidence score, and format breakdown:
 ```bash
-john identify hashes.txt
+jack identify hashes.txt
 ```
 
 ### 2. Execute Password Audit (`audit` / `crack`)
 Run a dictionary attack with transformation rules against target hashes:
 ```bash
-john audit hashes.txt --wordlist wordlists/common.txt --rules rules/basic.txt
+jack audit hashes.txt --wordlist wordlists/common.txt --rules rules/basic.txt
 ```
 
 Run a mask attack for 6-digit PINs:
 ```bash
-john audit hashes.txt --mode mask --mask "?d?d?d?d?d?d"
+jack audit hashes.txt --mode mask --mask "?d?d?d?d?d?d"
 ```
 
 Run an incremental brute-force attack across alphanumeric characters:
 ```bash
-john audit hashes.txt --mode incremental --charset alphanum --min-len 1 --max-len 6
+jack audit hashes.txt --mode incremental --charset alphanum --min-len 1 --max-len 6
 ```
 
 ### 3. Hardware Diagnostics & Benchmarks
 Inspect CPU features (AVX2, SSE4.2), logical cores, and memory:
 ```bash
-john hardware
+jack hardware
 ```
 
 Benchmark hash performance ($H/s$) across supported algorithms:
 ```bash
-john benchmark
+jack benchmark
 ```
 
 ### 4. Multi-Target Cross-Reference Audit
 Audit multiple hash sets simultaneously to discover shared credential leaks:
 ```bash
-john multitarget target1.txt target2.txt
+jack multitarget target1.txt target2.txt
 ```
 
 ### 5. Session Management
 List, resume, or clean up audit sessions:
 ```bash
 # List active & saved sessions
-john session-list
+jack session-list
 
 # Resume a paused session
-john session-resume <session_id>
+jack session-resume <session_id>
 
 # Delete a session
-john session-delete <session_id>
+jack session-delete <session_id>
 ```
 
 ### 6. Environment Health Check
 Validate installed dependencies, configuration files, and permissions:
 ```bash
-john doctor
+jack doctor
 ```
 
 ---

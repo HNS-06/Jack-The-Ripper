@@ -34,7 +34,7 @@ class ReportData:
 
 class ReportGenerator:
     def __init__(self, output_dir: Optional[str] = None):
-        self.output_dir = Path(output_dir) if output_dir else Path.home() / ".john" / "reports"
+        self.output_dir = Path(output_dir) if output_dir else Path.home() / ".jack" / "reports"
         self.output_dir.mkdir(parents=True, exist_ok=True)
 
     def generate(self, data: ReportData, filename: str) -> str:
