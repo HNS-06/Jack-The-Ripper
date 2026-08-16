@@ -1,0 +1,42 @@
+# Supported Hash Formats
+
+formats:
+  md5:
+    name: MD5
+    patterns:
+      - "^[a-f0-9]{32}$"
+      - "^\\$1\\$.*$"
+    hash_length: 32
+
+  sha1:
+    name: SHA-1
+    patterns:
+      - "^[a-f0-9]{40}$"
+      - "^\\{SHA\\}.*$"
+    hash_length: 40
+
+  sha256:
+    name: SHA-256
+    patterns:
+      - "^[a-f0-9]{64}$"
+      - "^\\$5\\$.*$"
+    hash_length: 64
+
+  sha512:
+    name: SHA-512
+    patterns:
+      - "^[a-f0-9]{128}$"
+      - "^\\$6\\$.*$"
+    hash_length: 128
+
+  ntlm:
+    name: NTLM
+    patterns:
+      - "^\\$NT\\$[a-f0-9]{32}$"
+    hash_length: 32
+
+  bcrypt:
+    name: bcrypt
+    patterns:
+      - "^\\$2[aby]?\\$.*$"
+    hash_length: 60

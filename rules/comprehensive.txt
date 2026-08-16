@@ -1,0 +1,38 @@
+# John the Ripper Comprehensive Rules
+# Extended rule set for thorough password auditing
+
+# Base transformations
+lower
+upper
+capitalize
+reverse
+
+# Number suffixes (1-4 digits)
+appendnumbers1
+appendnumbers2
+appendnumbers3
+appendnumbers4
+
+# Number prefixes
+prependnumbers1
+prependnumbers2
+
+# Symbol suffixes
+appendsymbols1
+appendsymbols2
+
+# L33t speak substitutions
+l33t
+
+# Keyboard shifts
+keyboardshifts
+
+# Combined common patterns
+capitalizeappendnumbers1
+upperappendnumbers1
+capitalizeappendsymbols1
+reverseappendnumbers1
+
+# Duplicate word
+duplicate2
+duplicate3

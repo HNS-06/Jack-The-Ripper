@@ -1,0 +1,35 @@
+# John the Ripper - Default Configuration
+
+engine:
+  workers: auto
+  backend: cpu
+  max_memory: 2GB
+
+session:
+  autosave: true
+  interval: 30
+  directory: ~/.john/sessions
+
+report:
+  format: json
+  directory: ~/.john/reports
+
+attack:
+  default_mode: dictionary
+  max_candidates: null
+  max_time: null
+
+hash_detection:
+  confidence_threshold: 0.5
+  auto_detect: true
+
+logging:
+  level: info
+  file: ~/.john/logs/john.log
+  max_size: 10MB
+  backup_count: 5
+
+security:
+  require_authorization: true
+  audit_logging: true
+  secure_cleanup: true

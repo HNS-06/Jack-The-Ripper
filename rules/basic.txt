@@ -1,0 +1,32 @@
+# John the Ripper Basic Rules
+# These rules transform base words into password candidates
+
+# Capitalization
+capitalize
+capitalizeprepend
+capitalizeappend
+
+# Uppercase
+upper
+
+# Reverse
+reverse
+
+# Append numbers
+appendnumbers1
+appendnumbers2
+appendnumbers3
+
+# Prepend numbers
+prependnumbers1
+prependnumbers2
+
+# Append symbols
+appendsymbols1
+
+# L33t speak
+l33t
+
+# Combined
+capitalizeappendnumbers1
+upperappendnumbers1
