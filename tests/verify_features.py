@@ -27,7 +27,7 @@ print('[5] Live dashboard: OK')
 
 from john.reporting.scoring import PasswordScorer
 scorer = PasswordScorer()
-scores = scorer.score_batch(['password', 'P@ssw0rd!23', 'xK9#mZ'])
+scores = scorer.score_batch(['password', 'AlphaNumeric123!', 'xK9#mZ'])
 for s in scores:
     print(f'   [{s.score:3d}] {s.strength:12s} {s.password}')
 
@@ -38,7 +38,7 @@ print(f'[7] Pattern analyzer: OK - {len(insights)} insights')
 groups = DuplicateDetector().detect([('pw1', 'h1'), ('pw1', 'h2')])
 print(f'[8] Duplicate detector: OK - {len(groups)} groups')
 
-suggestions = RuleLearner().learn(['Password1', 'Passw0rd!'])
+suggestions = RuleLearner().learn(['Password1', 'AlphaNumeric!'])
 print(f'[9] Rule learner: OK - {len(suggestions)} suggestions')
 
 from john.core.multitarget import MultiTargetManager

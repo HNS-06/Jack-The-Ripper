@@ -26,12 +26,12 @@ class Benchmark:
     def __init__(self):
         self._results: List[BenchmarkResult] = []
 
-    def run(self, algorithm, duration: int = 3, test_password: str = "benchmark_password_123") -> BenchmarkResult:
+    def run(self, algorithm, duration: int = 3, candidate_sample: str = "benchmark_sample") -> BenchmarkResult:
         start = time.time()
         count = 0
         while time.time() - start < duration:
             try:
-                algorithm.hash(test_password)
+                algorithm.hash(candidate_sample)
                 count += 1
             except Exception:
                 break

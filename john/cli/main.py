@@ -691,12 +691,12 @@ def config_show():
 # ── HELPERS ───────────────────────────────────────────────────────────────
 
 def _benchmark_algo(algo, duration: int) -> float:
-    test_password = "benchmark_test_password_123"
+    candidate_sample = "benchmark_sample"
     start = time.time()
     count = 0
     while time.time() - start < duration:
         try:
-            algo.hash(test_password)
+            algo.hash(candidate_sample)
             count += 1
         except Exception:
             break

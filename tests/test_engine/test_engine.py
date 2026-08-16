@@ -14,7 +14,7 @@ def test_audit_engine_list_attacks():
 
 def test_password_scorer():
     scorer = PasswordScorer()
-    scores = scorer.score_batch(["password", "P@ssw0rd!23"])
+    scores = scorer.score_batch(["password", "AlphaNumeric123!"])
     assert len(scores) == 2
     assert scores[1].score > scores[0].score
 
